@@ -5,8 +5,7 @@
     height: 3rem;
     gap: 1rem;
 }
-.botonCant{
-    
-    
-
+.ctnCount{
+    padding: 1rem;
+    background-color: rgba(248, 245, 241, 0.308);
 }

@@ -1,7 +1,7 @@
 import "./itemlistcontainer.css";
 import Products from "../../mocks/products";
 import ItemList from "../itemList";
-import { useId, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 function ItemListContainer({ isCategoryRoute, categoryId }) {
   const [listaProdu, setListaProdu] = useState([]);
@@ -16,11 +16,11 @@ function ItemListContainer({ isCategoryRoute, categoryId }) {
           const productsFiltered = reponse.filter(
             (elem) => elem.category === categoryId
           );
-          
+
           setListaProdu(productsFiltered);
         } else {
           setListaProdu(reponse);
-        }        
+        }
       })
       .catch((err) => console.log(err));
   }, [categoryId]);
@@ -28,6 +28,7 @@ function ItemListContainer({ isCategoryRoute, categoryId }) {
   return (
     <main className="cont">
       <ItemList productos={listaProdu} />
+
     </main>
   );
 }

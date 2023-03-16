@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "../components/NavBar";
 import ItemListContainer from "../components/ItemsListContainer";
 import { useParams } from "react-router-dom";
@@ -9,10 +9,11 @@ function Root() {
 
   return (
     <div className="contenedor">
-      <NavBar /> 
-      <ItemListContainer 
-      isCategoryRoute={isCategoryRoute}
-      categoryId={params.id}/>  
+      <NavBar />
+      <ItemListContainer
+        isCategoryRoute={isCategoryRoute}
+        categoryId={params.id}
+      />
     </div>
   );
 }

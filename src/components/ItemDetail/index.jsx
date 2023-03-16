@@ -6,9 +6,19 @@ function ItemDetail({ producto }) {
   const onAdd = (cant) => {
     console.log("Se agregaron " + cant);
   };
+  let textoDescriptivo;
+  if (producto.category == "interior") {
+    textoDescriptivo = "Interiores con buena luz";
+  } else {
+    if (producto.category == "exterior") {
+      textoDescriptivo = "Exteriores, al sol";
+    } else {
+      textoDescriptivo = "Media Sombra";
+    }
+  }
   return (
     <article>
-      <Container className="d-flex flex-row gap-5">
+      <Container className="d-flex flex-row gap-5 ctnTotal">
         <div className="imgCtn">
           <img
             src={producto.img}
@@ -19,7 +29,12 @@ function ItemDetail({ producto }) {
         <div className="infoProdu">
           <h2>{producto.name}</h2>
           <p>{producto.descripcion}</p>
-          <ItemCount stock={producto.stock} onAdd={onAdd} />
+          <p><strong>Ubicacion: </strong>{textoDescriptivo}</p>
+          <ItemCount
+            stock={producto.stock}
+            precio={producto.precio}
+            onAdd={onAdd}
+          />
         </div>
       </Container>
     </article>
