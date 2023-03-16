@@ -1,0 +1,11 @@
+.imgProdu{
+    max-width: 25rem;
+    height: auto;   
+}
+.infoProdu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #9c9999;
+}
