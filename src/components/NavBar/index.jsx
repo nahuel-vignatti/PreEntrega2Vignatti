@@ -5,16 +5,18 @@ import "./navbar.css";
 
 function NavBar(){
     return (
-    <nav>
-        <ul className="lista">
-            <li><NavLink to={"/"}><img src={img} alt="Logo Vivero" className="logo"/></NavLink></li>            
-            <li><NavLink to={"/category/interior"}>Interior</NavLink></li>
-            <li><NavLink to={"/category/exterior"}>Exterior</NavLink></li>
-            <li><NavLink to={"/category/sombra"}>Media Sombra</NavLink></li>
-            <li><CartWidget /></li>            
-        
-        </ul>
-        </nav>
+    <header>
+        <nav>
+            <ul className="lista">
+                <li><NavLink to={"/"}><img src={img} alt="Logo Vivero" className="logo"/></NavLink></li>            
+                <li><NavLink to={"/category/interior"}>Interior</NavLink></li>
+                <li><NavLink to={"/category/exterior"}>Exterior</NavLink></li>
+                <li><NavLink to={"/category/sombra"}>Media Sombra</NavLink></li>
+                <li><CartWidget /></li>            
+            
+            </ul>
+            </nav>
+    </header>
     )
 }
 

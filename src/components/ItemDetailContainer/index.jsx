@@ -18,9 +18,9 @@ function ItemDetailContainer({itemId}){
           .catch((err) => console.log(err));
       }, [itemId]);
 
-    return <section className="itemDetail">
+    return <main className="itemDetail">
          <ItemDetail producto={producto}/> 
-    </section>
+    </main>
 }
 
 export default ItemDetailContainer;

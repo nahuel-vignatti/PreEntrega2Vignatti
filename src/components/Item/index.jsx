@@ -5,13 +5,15 @@ import Button from "react-bootstrap/Button";
 
 function Item({ producto }) {
   return (
-    <Col xs={4} className="card">
-      <img src={producto.img} alt="" className="imgLista" />
+    <Col xs={4} className="card gap-2">
       <h5>{producto.name}</h5>
- 
-      <NavLink to={`/item/${producto.id}`}>        
-        <Button variant="primary">Ver Detalle </Button>{" "}
-      </NavLink>
+      <img src={producto.img} alt="" className="imgLista" />
+      <div>
+        <h6 className="mb-3">Precio: ${producto.precio}</h6>
+        <NavLink to={`/item/${producto.id}`}>
+          <Button variant="primary">Ver Detalle </Button>{" "}
+        </NavLink>
+      </div>
     </Col>
   );
 }
